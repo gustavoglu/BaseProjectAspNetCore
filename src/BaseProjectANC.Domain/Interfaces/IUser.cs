@@ -7,6 +7,8 @@ namespace BaseProjectANC.Domain.Interfaces
     {
         string UserName { get; }
 
+        string UserId { get; }
+
         bool IsAuthenticated();
 
         IEnumerable<Claim> GetClaimsIdentity();

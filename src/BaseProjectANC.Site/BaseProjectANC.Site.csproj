@@ -38,7 +38,7 @@
     <ProjectReference Include="..\BaseProjectANC.Application\BaseProjectANC.Application.csproj" />
     <ProjectReference Include="..\BaseProjectANC.Infra.Bus\BaseProjectANC.Infra.Bus.csproj" />
     <ProjectReference Include="..\BaseProjectANC.Infra.Identity\BaseProjectANC.Infra.Identity.csproj" />
-    <ProjectReference Include="..\BaseProjectANC.IoT\BaseProjectANC.Infra.IoC.csproj" />
+    <ProjectReference Include="..\BaseProjectANC.IoC\BaseProjectANC.Infra.IoC.csproj" />
     <ProjectReference Include="..\BaseProjectANC.Application\BaseProjectANC.Application.csproj" />
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
+using System;
+using System.Linq;
+using BaseProjectANC.Infra.Identity.Extensions;
 
 namespace BaseProjectANC.Infra.Identity.Models
 {
@@ -17,9 +20,11 @@ namespace BaseProjectANC.Infra.Identity.Models
 
         public string UserName => _accessor.HttpContext.User.Identity.Name;
 
+        public string UserId => IsAuthenticated() ? _accessor.HttpContext.User.GetUserId() : string.Empty;
+
         public IEnumerable<Claim> GetClaimsIdentity()
         {
-            return _accessor.HttpContext.User.Claims ;
+            return _accessor.HttpContext.User.Claims;
         }
 
         public bool IsAuthenticated()
