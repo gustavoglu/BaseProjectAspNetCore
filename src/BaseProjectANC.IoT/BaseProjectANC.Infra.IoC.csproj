@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseProjectANC.Application\BaseProjectANC.Application.csproj" />
+    <ProjectReference Include="..\BaseProjectANC.Domain.Core\BaseProjectANC.Domain.Core.csproj" />
+    <ProjectReference Include="..\BaseProjectANC.Domain\BaseProjectANC.Domain.csproj" />
+    <ProjectReference Include="..\BaseProjectANC.Infra.Bus\BaseProjectANC.Infra.Bus.csproj" />
+    <ProjectReference Include="..\BaseProjectANC.Infra.Identity\BaseProjectANC.Infra.Identity.csproj" />
+    <ProjectReference Include="..\BaseProjectANC.Infra\BaseProjectANC.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

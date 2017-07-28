@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{999B2420-01FC-4224-B885-FD47132C2EDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{937F876A-2D0C-44C5-95B5-B2F0295E0DBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application", "3 - Application", "{6E7247ED-A394-4C58-84BA-3B1440655C30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{330A4525-9B3C-486D-8A5A-9442FF62B5C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{CEBDC31A-B004-41DB-BAC9-8AF72DADBA8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Domain", "src\BaseProjectANC.Domain\BaseProjectANC.Domain.csproj", "{0496CB9D-411B-4841-89CD-E32BEBF6A069}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Infra.Data", "src\BaseProjectANC.Infra\BaseProjectANC.Infra.Data.csproj", "{044AE310-69EA-48F0-AC67-0611C1F8A5A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Domain.Core", "src\BaseProjectANC.Domain.Core\BaseProjectANC.Domain.Core.csproj", "{D34102BA-BB0E-40DF-91A0-6D373A40EE2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Infra.IoC", "src\BaseProjectANC.IoT\BaseProjectANC.Infra.IoC.csproj", "{CC804907-B5B7-49DC-BFD9-68374CEB0C27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Application", "src\BaseProjectANC.Application\BaseProjectANC.Application.csproj", "{9268A431-1B55-4FD9-8DE4-FF7FD2824D8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Infra.Bus", "src\BaseProjectANC.Infra.Bus\BaseProjectANC.Infra.Bus.csproj", "{AA403B1B-0416-4989-A6CB-B68D735E7B7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Site", "src\BaseProjectANC.Site\BaseProjectANC.Site.csproj", "{05B0A881-6E91-4BCA-9FBD-AF47191E030C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Infra.Identity", "src\BaseProjectANC.Infra.Identity\BaseProjectANC.Infra.Identity.csproj", "{F7D01A95-3E6E-43B5-AC8C-A10666240499}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0496CB9D-411B-4841-89CD-E32BEBF6A069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0496CB9D-411B-4841-89CD-E32BEBF6A069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0496CB9D-411B-4841-89CD-E32BEBF6A069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0496CB9D-411B-4841-89CD-E32BEBF6A069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{044AE310-69EA-48F0-AC67-0611C1F8A5A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044AE310-69EA-48F0-AC67-0611C1F8A5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044AE310-69EA-48F0-AC67-0611C1F8A5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044AE310-69EA-48F0-AC67-0611C1F8A5A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D34102BA-BB0E-40DF-91A0-6D373A40EE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D34102BA-BB0E-40DF-91A0-6D373A40EE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D34102BA-BB0E-40DF-91A0-6D373A40EE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D34102BA-BB0E-40DF-91A0-6D373A40EE2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC804907-B5B7-49DC-BFD9-68374CEB0C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC804907-B5B7-49DC-BFD9-68374CEB0C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC804907-B5B7-49DC-BFD9-68374CEB0C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC804907-B5B7-49DC-BFD9-68374CEB0C27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9268A431-1B55-4FD9-8DE4-FF7FD2824D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9268A431-1B55-4FD9-8DE4-FF7FD2824D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9268A431-1B55-4FD9-8DE4-FF7FD2824D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9268A431-1B55-4FD9-8DE4-FF7FD2824D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA403B1B-0416-4989-A6CB-B68D735E7B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA403B1B-0416-4989-A6CB-B68D735E7B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA403B1B-0416-4989-A6CB-B68D735E7B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA403B1B-0416-4989-A6CB-B68D735E7B7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B0A881-6E91-4BCA-9FBD-AF47191E030C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B0A881-6E91-4BCA-9FBD-AF47191E030C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B0A881-6E91-4BCA-9FBD-AF47191E030C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B0A881-6E91-4BCA-9FBD-AF47191E030C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7D01A95-3E6E-43B5-AC8C-A10666240499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7D01A95-3E6E-43B5-AC8C-A10666240499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7D01A95-3E6E-43B5-AC8C-A10666240499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7D01A95-3E6E-43B5-AC8C-A10666240499}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0496CB9D-411B-4841-89CD-E32BEBF6A069} = {330A4525-9B3C-486D-8A5A-9442FF62B5C4}
+		{044AE310-69EA-48F0-AC67-0611C1F8A5A4} = {CEBDC31A-B004-41DB-BAC9-8AF72DADBA8A}
+		{D34102BA-BB0E-40DF-91A0-6D373A40EE2A} = {330A4525-9B3C-486D-8A5A-9442FF62B5C4}
+		{CC804907-B5B7-49DC-BFD9-68374CEB0C27} = {CEBDC31A-B004-41DB-BAC9-8AF72DADBA8A}
+		{9268A431-1B55-4FD9-8DE4-FF7FD2824D8C} = {6E7247ED-A394-4C58-84BA-3B1440655C30}
+		{AA403B1B-0416-4989-A6CB-B68D735E7B7F} = {CEBDC31A-B004-41DB-BAC9-8AF72DADBA8A}
+		{05B0A881-6E91-4BCA-9FBD-AF47191E030C} = {999B2420-01FC-4224-B885-FD47132C2EDE}
+		{F7D01A95-3E6E-43B5-AC8C-A10666240499} = {CEBDC31A-B004-41DB-BAC9-8AF72DADBA8A}
+	EndGlobalSection
+EndGlobal

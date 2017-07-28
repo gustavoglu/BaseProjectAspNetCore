@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="automapper" Version="6.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseProjectANC.Domain\BaseProjectANC.Domain.csproj" />
+    <ProjectReference Include="..\BaseProjectANC.Infra\BaseProjectANC.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
