@@ -11,6 +11,10 @@ using Microsoft.AspNetCore.Http;
 using BaseProjectANC.Infra.Bus;
 using BaseProjectANC.Infra.IoC;
 using BaseProjectANC.Infra.Identity.Data;
+using Microsoft.EntityFrameworkCore;
+using BaseProjectANC.Infra.Identity.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using AutoMapper;
 
 namespace BaseProjectANC.Services.API
 {
@@ -31,8 +35,17 @@ namespace BaseProjectANC.Services.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
+
+            services.AddDbContext<ApplicationDbContext>(opt =>
+            opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnectoin")));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
             services.AddMvc();
+
+            services.AddAutoMapper();
 
             NativeSimpleInjector.RegisterDependencys(services);
 

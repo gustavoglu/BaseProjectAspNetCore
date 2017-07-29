@@ -17,6 +17,7 @@ namespace BaseProjectANC.Infra.Data.Mappings
                 .HasMaxLength(150)
                 .HasColumnType("varchar(150)")
                 .IsRequired();
+
         }
     }
 }

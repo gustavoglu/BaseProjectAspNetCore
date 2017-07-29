@@ -16,5 +16,10 @@ namespace BaseProjectANC.Infra.Data.Extensions
             builder.Property(e => e.DeletadoPor).HasColumnType("varchar(150)").HasMaxLength(150);
             builder.Property(e => e.AtualizadoPor).HasColumnType("varchar(150)").HasMaxLength(150);
         }
+
+        protected EntityTypeConfigurationBaseEntity(ModelBuilder builder)
+        {
+            MappingPropertysBaseEntity(builder.Entity<T>());
+        }
     }
 }
