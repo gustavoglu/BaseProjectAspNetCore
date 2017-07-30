@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Site", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Infra.Identity", "src\BaseProjectANC.Infra.Identity\BaseProjectANC.Infra.Identity.csproj", "{F7D01A95-3E6E-43B5-AC8C-A10666240499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseProjectANC.Services.API", "src\BaseProjectANC.Services.API\BaseProjectANC.Services.API.csproj", "{CEA6D535-0ADC-4C54-ACA5-E684E29FCC5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Services.API", "src\BaseProjectANC.Services.API\BaseProjectANC.Services.API.csproj", "{CEA6D535-0ADC-4C54-ACA5-E684E29FCC5C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProjectANC.Infra.IoC", "src\BaseProjectANC.IoC\BaseProjectANC.Infra.IoC.csproj", "{5843537C-DC4C-4F29-8DAF-701E5C9DEB57}"
 EndProject
