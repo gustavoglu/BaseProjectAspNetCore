@@ -44,12 +44,12 @@ namespace BaseProjectANC.Services.API
 
         public IConfigurationRoot Configuration { get; }
         private const string SecretKey = "BaseProjectAspNetCoreSercretKey";
-        private readonly SymmetricSecurityKey _signKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(SecretKey)); 
+        private readonly SymmetricSecurityKey _signKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(SecretKey));
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
-         
+
 
             services.AddDbContext<ApplicationDbContext>(opt =>
             opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnectoin")));
@@ -83,9 +83,8 @@ namespace BaseProjectANC.Services.API
 
             services.AddAutoMapper();
 
-
-            services.AddSwaggerGen(s => {
-
+            services.AddSwaggerGen(s =>
+            {
                 s.SwaggerDoc("v1", new Info()
                 {
                     Version = "v1",
@@ -94,9 +93,7 @@ namespace BaseProjectANC.Services.API
                     TermsOfService = "Nenhum",
                     Contact = new Contact { Name = "Gustavo Giroldo", Email = "gustavoglu@hotmail.com" },
                 });
-
             });
-
 
             NativeSimpleInjector.RegisterDependencys(services);
 
@@ -128,13 +125,28 @@ namespace BaseProjectANC.Services.API
 
             };
 
+            app.UseJwtBearerAuthentication(new JwtBearerOptions
+            {
+                AutomaticAuthenticate = true,
+                AutomaticChallenge = true,
+                TokenValidationParameters = tokenValidationParameters
+            });
+
+
+            app.UseCors(c =>
+            {
+                c.AllowAnyHeader();
+                c.AllowAnyMethod();
+                c.AllowAnyOrigin();
+            });
+
             app.UseStaticFiles();
             app.UseIdentity();
             app.UseMvc();
 
             //app.UseSWaggerAuthorized();
             app.UseSwagger();
-            app.UseSwaggerUI(s => 
+            app.UseSwaggerUI(s =>
             {
                 s.SwaggerEndpoint("/swagger/v1/swagger.json", "BaseProjectANC API V1");
             });
