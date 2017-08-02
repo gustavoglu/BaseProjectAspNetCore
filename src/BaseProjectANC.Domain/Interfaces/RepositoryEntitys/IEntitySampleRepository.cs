@@ -4,5 +4,6 @@ namespace BaseProjectANC.Domain.Interfaces.RepositoryEntitys
 {
     public interface IEntitySampleRepository :IRepository<EntitySample>
     {
+        
     }
 }

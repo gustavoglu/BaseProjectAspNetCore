@@ -23,23 +23,17 @@ namespace BaseProjectANC.Infra.Data.Migrations
 
                     b.Property<DateTime?>("AtualizadoEm");
 
-                    b.Property<string>("AtualizadoPor")
-                        .HasColumnType("varchar(150)")
-                        .HasMaxLength(150);
+                    b.Property<string>("AtualizadoPor");
 
                     b.Property<DateTime?>("CriadoEm");
 
-                    b.Property<string>("CriadoPor")
-                        .HasColumnType("varchar(150)")
-                        .HasMaxLength(150);
+                    b.Property<string>("CriadoPor");
 
                     b.Property<bool?>("Deletado");
 
                     b.Property<DateTime?>("DeletadoEm");
 
-                    b.Property<string>("DeletadoPor")
-                        .HasColumnType("varchar(150)")
-                        .HasMaxLength(150);
+                    b.Property<string>("DeletadoPor");
 
                     b.Property<string>("Descricao")
                         .IsRequired()

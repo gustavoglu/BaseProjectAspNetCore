@@ -21,17 +21,17 @@ namespace BaseProjectANC.Infra.Data.Repository
             this.DbSet = Db.Set<T>();
         }
 
-        public void Atualizar(T entity)
+        public virtual void Atualizar(T entity)
         {
             DbSet.Update(entity);
         }
 
-        public void Criar(T entity)
+        public virtual void Criar(T entity)
         {
             DbSet.Add(entity);
         }
 
-        public void Criar(List<T> entitys)
+        public virtual void Criar(List<T> entitys)
         {
             foreach (var entity in entitys)
             {
@@ -39,55 +39,55 @@ namespace BaseProjectANC.Infra.Data.Repository
             }
         }
 
-        public void Deletar(Guid id)
+        public virtual void Deletar(Guid id)
         {
             var entity = DbSet.Find(id);
             entity.Deletado = true;
             DbSet.Remove(entity);
         }
 
-        public IEnumerable<T> Pesquisar(Expression<Func<T, bool>> predicado)
+        public virtual IEnumerable<T> Pesquisar(Expression<Func<T, bool>> predicado)
         {
            return DbSet.Where(predicado);
         }
 
-        public void Reativar(Guid id)
+        public virtual void Reativar(Guid id)
         {
             var entity = DbSet.Find(id);
             entity.Deletado = false;
             Atualizar(entity);
         }
 
-        public T TrazerAtivoPorId(Guid id)
+        public virtual T TrazerAtivoPorId(Guid id)
         {
             return DbSet.FirstOrDefault(e => e.Id == id && e.Deletado == false);
         }
 
-        public T TrazerDeletadoPorId(Guid id)
+        public virtual T TrazerDeletadoPorId(Guid id)
         {
             return DbSet.FirstOrDefault(e => e.Id == id && e.Deletado == true);
         }
 
-        public T TrazerPorId(Guid id)
+        public virtual T TrazerPorId(Guid id)
         {
             return DbSet.FirstOrDefault(e => e.Id == id);
         }
 
-        public IEnumerable<T> TrazerTodos()
+        public virtual IEnumerable<T> TrazerTodos()
         {
             return DbSet.ToList();
         }
 
-        public IEnumerable<T> TrazerTodosAtivos()
+        public virtual IEnumerable<T> TrazerTodosAtivos()
         {
             return DbSet.Where(e => e.Deletado == false).ToList();
         }
 
-        public IEnumerable<T> TrazerTodosDeletados()
+        public virtual IEnumerable<T> TrazerTodosDeletados()
         {
             return DbSet.Where(e => e.Deletado == true).ToList();
         }
-        public void Dispose()
+        public virtual void Dispose()
         {
            this.Db.Dispose();
             GC.SuppressFinalize(this);

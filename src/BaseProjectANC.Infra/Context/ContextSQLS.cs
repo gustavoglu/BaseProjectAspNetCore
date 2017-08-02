@@ -15,6 +15,14 @@ namespace BaseProjectANC.Infra.Data.Context
     {
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            var propertys = modelBuilder.Model.GetEntityTypes().SelectMany(t => t.GetProperties());
+            var propertysString = propertys.Where(p => p.ClrType == typeof(string));
+
+            foreach (var propertyString in propertysString)
+            {
+                propertyString.SetMaxLength(200);
+            }
             // Maps
             modelBuilder.AddConfiguration(new EntitySampleMap());
 
@@ -30,6 +38,8 @@ namespace BaseProjectANC.Infra.Data.Context
 
             optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
         }
+
+
 
         public override int SaveChanges()
         {

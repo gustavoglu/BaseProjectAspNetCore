@@ -1,4 +1,5 @@
-﻿using BaseProjectANC.Domain.Interfaces.RepositoryEntitys;
+﻿using System;
+using BaseProjectANC.Domain.Interfaces.RepositoryEntitys;
 using BaseProjectANC.Domain.Models.EntitySample;
 using BaseProjectANC.Infra.Data.Context;
 
