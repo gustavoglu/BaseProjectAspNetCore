@@ -110,7 +110,7 @@ namespace BaseProjectANC.Services.API
             var tokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuer = true,
-                ValidIssuer = jwtAppSettingOptions[nameof(JwtTokenOptions.Audience)],
+                ValidIssuer = jwtAppSettingOptions[nameof(JwtTokenOptions.Issuer)],
 
                 ValidateAudience = true,
                 ValidAudience = jwtAppSettingOptions[nameof(JwtTokenOptions.Audience)],

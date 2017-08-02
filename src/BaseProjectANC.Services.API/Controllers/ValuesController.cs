@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BaseProjectANC.Services.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     //[Authorize]
     public class ValuesController : Controller

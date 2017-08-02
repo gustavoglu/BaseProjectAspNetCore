@@ -83,7 +83,7 @@ namespace BaseProjectANC.Services.API.Controllers
             NotificarErro(result.ToString(), "Falha ao realizar o Login");
             return Response(model);
         }
-
+       
         private void AdicionarErrosIdentity(IdentityResult result)
         {
             foreach (var error in result.Errors)
@@ -100,7 +100,7 @@ namespace BaseProjectANC.Services.API.Controllers
             userClaims.Add(new Claim(JwtRegisteredClaimNames.Sub, user.Id));
             userClaims.Add(new Claim(JwtRegisteredClaimNames.Email, user.Email));
             userClaims.Add(new Claim(JwtRegisteredClaimNames.Jti, await _jwtTokenOptions.JtiGenerator()));
-            userClaims.Add(new Claim(JwtRegisteredClaimNames.Iat, ToUnixEpochDate(_jwtTokenOptions.IssueAt).ToString(),ClaimValueTypes.Integer64));
+            userClaims.Add(new Claim(JwtRegisteredClaimNames.Iat, ToUnixEpochDate(_jwtTokenOptions.IssueAt).ToString(), ClaimValueTypes.Integer64));
 
             var jwt = new JwtSecurityToken(
                 issuer: _jwtTokenOptions.Issuer,
@@ -116,11 +116,9 @@ namespace BaseProjectANC.Services.API.Controllers
             {
                 access_token = encodedJwt,
                 expirese_in = (int)_jwtTokenOptions.ValidFor.TotalSeconds,
-                user = user,
             };
 
             return response;
-
         }
 
         private static void ThrowIfInvalidOptions(JwtTokenOptions options)
